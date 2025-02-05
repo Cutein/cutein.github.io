@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+h1 {
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00aaff, #00ffcc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+/* Estilo para la descripción */
+p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #00ffcc;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
+}
+.projects p{
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Estilos del nav */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Efectos en los enlaces */
+.footer a, .proyect_link, nav ul li a {
+    text-decoration: none;
+    color: #00aaff; /* Azul neón */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.proyect_link{
+    color: #ffffff; /* Azul neón */
+}
+/* Efecto de subrayado animado */
+.footer a::afer, nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #00aaff;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.proyect_link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #000000;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+/* Hover: subrayado expansivo */
+.footer a:hover::after , nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Hover: cambio de color y sombra */
+.footer a:hover,nav ul li a:hover {
+    color: #00ffcc; /* Azul verdoso */
+    text-shadow: 0 0 8px #00ffcc;
+}
+.proyect_link:hover{
+    color: #000000; /* Azul verdoso */
+    text-shadow: 0 0 8px #00ffcc;
+}
+.proyect_link{
+    position: relative;
+    background-color: #008b8b;
+    display: inline-block;
+}
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* Estilos generales de la sección */
+.skills {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 30vw;
+}
+
+/* Título estilizado */
+.projects h2, .skills h2, .contact h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ffcc;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
+}
+.projects h2{
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+/* Contenedor de habilidades */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Tarjetas de habilidades */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Íconos de habilidades */
+.skill-card i {
+    font-size: 40px;
+    color: #00aaff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Texto dentro de la tarjeta */
+.skill-card span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover: efecto de elevación y cambio de color */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.skill-card:hover i {
+    color: #00ffcc;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projects .project {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.projects{
+    background-color: #008b8b;
+}
+.projects .project h3 {
+    margin-bottom: 10px;
+}
+.circle_arrow{
+    background-color: #0b2999;
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+.circle_arrow span{
+    display: block;
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form label {
+    margin-bottom: 5px;
+}
+
+.contact form input, .contact form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.carousel-inner, .carousel-inner2,.carousel-inner3{
+    height: inherit;
+    border-radius: 10px;
+}
+#carouselFrontProtexiones, #carouselBackProtexiones{
+    height: 500px;
+}
+.container.me{
+    background-color: #000000;
+    padding: 20px;
+    /* border-radius: 5px; */
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 2px 2px 10px 5px #d2caff;
+    color: #ffffff;
+    max-width: 700px;
+}
+.me p{
+    font-size: 16px;
+}
+body{
+    background-color: #000000!important;
+    background-image: url('/images/fullstack_dev.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.carousel-indicators{
+    position: relative!important;
+    margin-top: 20px;
+}
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.technologies span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #000000;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technologies span:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.technologies i {
+    font-size: 1.3rem;
+    color: #3498db;
+}
+
+.technologies span:hover i {
+    color: #2980b9;
+}
+.h2_proyects{
+    display: inline-block;
+    position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+}
+.carousel-item2,.carousel-item3 {
+    display: none;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.carousel-item2.active ,.carousel-item3.active {
+    display: flex;
+    background-color: #ffffff;
+}
+.carousel-item2 img,.carousel-item3 img {
+    width: 100%; /* O usa un máximo si es necesario */
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-info i {
+    color: #007bff;
+    margin-right: 8px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+.img_proy{
+    max-width: 200px;
+}
+@media (max-width: 768px) {
+    .contact h2, .projects h2, .skills h2,.about h2, header h1{
+        font-size: 18px;
+    }
+    nav ul{
+        display: block;
+    }
+    #carouselFrontProtexiones, #carouselBackProtexiones{
+        height: 200px;
+    }
+    .me p{
+        font-size: 14px;
+    }
+    .about{
+        padding: 20px;
+    }
+    body{
+        background-size: inherit;
+        background-position: center top;
+    }
+    .skill-card{
+        width: 150px;
+    }
+    .img_proy{
+        max-width: 120px;
+    }
+    .projects p{
+        font-size: 14px;
+    }
+    .footer p{
+        font-size: 12px;
+    }
+}
